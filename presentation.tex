@@ -38,7 +38,7 @@
     \vfill
     \par
     \begin{beamercolorbox}[sep=8pt,center,#1]{author}
-      \usebeamerfont{author}\textbf{Tesi di Laurea Magistrale di} \\ \insertauthor
+      \usebeamerfont{author}\textbf{Middleware Project Presentation of} \\ \insertauthor
     \end{beamercolorbox}
     \begin{beamercolorbox}[sep=8pt,center,#1]{institute}
       \usebeamerfont{institute}\insertinstitute
@@ -89,76 +89,76 @@
 \begin{document}
 \setbeamertemplate{navigation symbols}{}
 
-\title[ZvH]{Zorro vs Hackers:\\ Storia di un Vero Amore}
+\title[DropboxLike Application]{Dropboxlike application\\ using CORBA }
 		
-\author[P. Pluto, T. Caio]{Pippo Pluto, \small{matr. xxxxxx}\\ Tizio Caio, \small{matr. yyyyyy}\\~\\ \textbf{Relatore:} Prof. Pico de la Mirandola \\ \textbf{Correlatore:}El Se\~nor Diego de la Vega\vspace{0.3cm}}
+\author[A. Mambretti]{Andrea Mambretti, \small{matr. 783286}\\~\\ \textbf{Professor:} Prof. Gianpaolo Cugola\\ \textbf{Assistant:} Ing. Alessandro Sivieri\vspace{0.3cm}}
 
 \institute{\hfill\begin{columns}\begin{column}{0.20\columnwidth}\hfill\includegraphics[width=0.8\columnwidth]{img/PoliMI.eps}\end{column} \begin{column}{0.45\columnwidth}\centering Politecnico di Milano\\Scuola di Ingegneria Industriale e dell'Informazione\\Corso di Laurea Magistrale in Ingegneria Informatica\end{column}\begin{column}{0.2\columnwidth}\hfill\includegraphics[scale=0.8]{img/necst-official-logo-white}\end{column}\end{columns}}
 
 \date{}
 
-\frame[plain]{\vspace{1.1cm}\titlepage} 
+\frame[plain]{\vspace{1.1cm}\titlepage}
 
-\section[Section 1]{Section 1}
+\section[Infrustructure]{Overview}
 \subsection{}
-\frame{\frametitle{Title 1} \pause
-Trova le \textbf{Differenze}.
-
+\frame{\frametitle{Basic schema}
 \begin{figure}
 \centering
-\includegraphics[scale=0.5]{img/zorrovsdiego.png}
+\includegraphics[scale=0.4]{img/network.eps}
 \end{figure}
-\pause \vspace{-0.2cm}
-Description:
-\begin{description}
-\item[Desc1]
-\item[Desc2]
-\end{description}
 }
 
-\section[Section 2]{Section}
+\section[Server]{Server Internals}
 \subsection{}
-
-\frame{\frametitle{Title 2} \pause
-\begin{columns}
-\begin{column}{0.6\textwidth}
-\visible<2->{Show 1} \\
-\vspace{0.5cm}
-\visible<3->{Show 2} \\
-\vspace{0.5cm}
-\visible<4->{Show 3}
-\end{column}
-\begin{column}{0.4\textwidth}
-\centering
-\includegraphics[scale=0.55]{img/zorrovsdiego.png}
-\end{column}
-\end{columns}
+\frame{\frametitle{Data Structures}
+    \begin{columns}
+        \begin{column}
+            {0.20\columnwidth}
+            \begin{figure}
+                \includegraphics[scale=0.3]{img/server_internals.eps}
+           \end{figure}
+        \end{column}
+        \begin{column}
+            {0.70\columnwidth}
+            \begin{itemize}
+                \item{\textbf{User Manager:} List<UserInfo>}
+                    \begin{itemize}
+                        \item{name}
+                        \item{surname}
+                        \item{password}
+                        \item{username}
+                    \end{itemize}
+                \item{\textbf{Server:} List<FileAtRepository>}
+                    \begin{itemize}
+                        \item{name}
+                        \item{hash}
+                        \item{ownerUserName}
+                        \item{cont}
+                    \end{itemize}
+            \end{itemize}
+        \end{column}
+    \end{columns}
 }
-
-\frame{\frametitle{Filtro linguistico: costruzione} \pause
-
-\begin{block}{Block}
-Bla bla bla
-\end{block}
+\section[Client]{Client Internals}
+\subsection{}
+\frame{\frametitle{Java version}
+\begin{figure}
+    \includegraphics[scale=0.3]{img/client_java_internals.eps}
+\end{figure}
 }
-
-\frame{\frametitle{Conclusioni} \pause
-In conclusione, questa presentazione \`e fantastica: \pause
-\begin{enumerate}
-\item Item 1 \pause
-\item Item 2 \pause
-\item Utem 3
-\end{enumerate}
+\frame{\frametitle{Commandline}
+\begin{figure}
+    \includegraphics[scale=0.5]{img/command_line.eps}
+\end{figure}
 }
-
-
-\section{}
-\begin{frame}
-Grazie per l'attenzione. \textbf{Domande?} \\
-\vspace{2cm}
-Questo lavoro \`e stato inviato per la pubblicazione a:\\~\\
-\textbf{Conferenza}\\
-Dicembre 00, Lapponia (Chiedere di Babbo).
-\end{frame}
-
+\frame{\frametitle{Erlang version}
+\begin{figure}
+    \includegraphics[scale=0.3]{img/client_erlang_internals.eps}
+\end{figure}
+}
+\frame{\frametitle{Live demo}
+\begin{figure}
+    \includegraphics[scale=0.5]{img/demo_dropboxlike.eps}
+\end{figure}
+}
 \end{document}
