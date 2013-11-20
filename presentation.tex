@@ -89,7 +89,7 @@
 \begin{document}
 \setbeamertemplate{navigation symbols}{}
 
-\title[DropboxLike Application]{Dropboxlike application\\ using CORBA }
+\title[Distributed Tic Tac Toe]{Tic Tac Toe Application\\ using JMS }
 		
 \author[A. Mambretti]{Andrea Mambretti, \small{matr. 783286}\\~\\ \textbf{Professor:} Prof. Gianpaolo Cugola\\ \textbf{Assistant:} Ing. Alessandro Sivieri\vspace{0.3cm}}
 
@@ -104,61 +104,14 @@
 \frame{\frametitle{Basic schema}
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{img/network.eps}
+\includegraphics[scale=0.4]{img/schema_tictactoe.eps}
 \end{figure}
 }
 
-\section[Server]{Server Internals}
-\subsection{}
-\frame{\frametitle{Data Structures}
-    \begin{columns}
-        \begin{column}
-            {0.20\columnwidth}
-            \begin{figure}
-                \includegraphics[scale=0.3]{img/server_internals.eps}
-           \end{figure}
-        \end{column}
-        \begin{column}
-            {0.70\columnwidth}
-            \begin{itemize}
-                \item{\textbf{User Manager:} List<UserInfo>}
-                    \begin{itemize}
-                        \item{name}
-                        \item{surname}
-                        \item{password}
-                        \item{username}
-                    \end{itemize}
-                \item{\textbf{Server:} List<FileAtRepository>}
-                    \begin{itemize}
-                        \item{name}
-                        \item{hash}
-                        \item{ownerUserName}
-                        \item{cont}
-                    \end{itemize}
-            \end{itemize}
-        \end{column}
-    \end{columns}
-}
-\section[Client]{Client Internals}
-\subsection{}
-\frame{\frametitle{Java version}
+\frame{\frametitle{Demo schema}
 \begin{figure}
-    \includegraphics[scale=0.3]{img/client_java_internals.eps}
-\end{figure}
-}
-\frame{\frametitle{Commandline}
-\begin{figure}
-    \includegraphics[scale=0.5]{img/command_line.eps}
-\end{figure}
-}
-\frame{\frametitle{Erlang version}
-\begin{figure}
-    \includegraphics[scale=0.3]{img/client_erlang_internals.eps}
-\end{figure}
-}
-\frame{\frametitle{Live demo}
-\begin{figure}
-    \includegraphics[scale=0.5]{img/demo_dropboxlike.eps}
+\centering
+\includegraphics[scale=0.4]{img/demo_tictactoe.eps}
 \end{figure}
 }
 \end{document}
